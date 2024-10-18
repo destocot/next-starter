@@ -1,8 +1,7 @@
 import Link from "next/link";
 
 import { Container } from "@/components/custom-ui/container";
-import { ThemeToggler } from "@/components/theme-toggler";
-import { DashboardButton } from "@/components/custom-ui/dashboard-button";
+import { NavWrapper } from "./nav-wrapper";
 
 export const Header = () => {
   return (
@@ -11,17 +10,7 @@ export const Header = () => {
         <Link href="/">
           <h2 className="text-2xl font-bold tracking-tight">Next Starter</h2>
         </Link>
-        <nav>
-          <ul className="flex items-center gap-4">
-            <li>
-              {" "}
-              <DashboardButton />{" "}
-            </li>
-            <li>
-              <ThemeToggler />
-            </li>
-          </ul>
-        </nav>
+        <NavWrapper />
       </Container>
     </header>
   );

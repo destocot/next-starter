@@ -1,27 +1,37 @@
 "use client";
 
 import { useSession } from "next-auth/react";
-import { ButtonLink } from "./button-link";
-import { Button } from "../ui/button";
 
-export const DashboardButton = () => {
+import { ButtonLink } from "@/components/custom-ui/button-link";
+import { Button, type ButtonProps } from "@/components/ui/button";
+
+type DashboardButtonProps = ButtonProps;
+
+export const DashboardButton = ({
+  variant = "default",
+  className,
+  size,
+}: DashboardButtonProps) => {
   const { status } = useSession();
 
   if (status === "loading") {
     return (
-      <Button disabled asChild>
-        <div className="animate-pulse text-transparent">Sign In</div>
+      <Button variant={variant} className={className} size={size} disabled>
+        <span className="animate-pulse select-none text-transparent">
+          Sign In
+        </span>
       </Button>
     );
   }
 
-  if (status === "unauthenticated") {
-    return <ButtonLink href="/auth/signin">Sign In</ButtonLink>;
-  }
-
   return (
-    <ButtonLink href="/dashboard" size="sm">
-      Dashboard
+    <ButtonLink
+      variant={variant}
+      className={className}
+      size={size}
+      href={status === "authenticated" ? "/dashboard" : "/auth/signin"}
+    >
+      {status === "authenticated" ? "Dashboard" : "Sign In"}
     </ButtonLink>
   );
 };

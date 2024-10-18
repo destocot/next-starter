@@ -17,7 +17,7 @@ export default async function Page() {
   return (
     <main className="mt-8">
       <Container>
-        <div className="space-y-4">
+        <div className="space-y-8">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
             <div className="flex items-center gap-2">

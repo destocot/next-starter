@@ -13,7 +13,7 @@ export default async function Page() {
   return (
     <main className="mt-8">
       <Container>
-        <div className="space-y-4">
+        <div className="space-y-8">
           <div className="flex flex-wrap-reverse justify-between gap-4">
             <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
               New Post
@@ -23,8 +23,6 @@ export default async function Page() {
               Back to Posts
             </ButtonLink>
           </div>
-
-          <div className="h-1 bg-muted" />
 
           <div className="max-w-sm">
             <CreatePostForm />

@@ -12,7 +12,7 @@ export default async function Page() {
   return (
     <main className="mt-8">
       <Container>
-        <div className="space-y-4">
+        <div className="space-y-8">
           <div className="flex flex-wrap-reverse justify-between gap-4">
             <h1 className="text-3xl font-bold tracking-tight">Posts</h1>
             <ButtonLink href="/posts/new" size="sm">

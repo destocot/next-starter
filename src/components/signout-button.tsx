@@ -4,7 +4,9 @@ import { signoutAction } from "@/actions/auth/signout-action";
 import { SubmitButton } from "@/components/custom-ui/submit-button";
 import { useTransition } from "react";
 
-export const SignoutButton = () => {
+type SignoutButtonProps = { className?: string };
+
+export const SignoutButton = ({ className }: SignoutButtonProps) => {
   const [isPending, startTransition] = useTransition();
 
   const clickHandler = () => {
@@ -21,7 +23,7 @@ export const SignoutButton = () => {
       disabled={isPending}
       variant="destructive"
       size="sm"
-      className="w-20"
+      className={className}
     >
       Sign Out
     </SubmitButton>

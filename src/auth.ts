@@ -19,6 +19,7 @@ const nextAuthConfig: NextAuthConfig = {
   adapter,
   session: { strategy: "database", maxAge: MAX_AGE },
   secret: process.env.AUTH_SECRET,
+  pages: { signIn: "/auth/signin" },
   callbacks: {
     jwt: ({ token, account }) => {
       if (account?.provider === "credentials") {

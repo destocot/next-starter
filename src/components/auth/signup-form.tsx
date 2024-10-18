@@ -65,7 +65,7 @@ export const SignupForm = () => {
         />
         {renderError("confirmPassword")}
       </div>
-      <SubmitButton className="w-full">Signup</SubmitButton>
+      <SubmitButton className="w-full">Sign Up</SubmitButton>
     </form>
   );
 };

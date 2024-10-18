@@ -30,7 +30,7 @@ export default async function Page({ params }: PageProps) {
   return (
     <main className="mt-8">
       <Container>
-        <div className="space-y-4">
+        <div className="space-y-8">
           <div className="flex flex-wrap-reverse justify-between gap-4">
             <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
               Post {post.postId}
@@ -40,8 +40,6 @@ export default async function Page({ params }: PageProps) {
               Back to Posts
             </ButtonLink>
           </div>
-
-          <div className="h-1 bg-muted" />
 
           <div className="flex flex-col justify-between gap-2 sm:flex-row">
             <div className="space-y-2">
