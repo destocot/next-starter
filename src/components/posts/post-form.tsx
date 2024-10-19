@@ -69,7 +69,7 @@ export const PostForm = ({
         />
         {renderError("content")}
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-4">
         <SubmitButton size="sm" className="flex-1">
           {defaultPost ? "Update Post" : "Create Post"}
         </SubmitButton>

@@ -1,5 +1,5 @@
 import { DashboardButton } from "@/components/custom-ui/dashboard-button";
-import { ThemeToggler } from "@/components/theme-toggler";
+import { ButtonLink } from "@/components/custom-ui/button-link";
 
 export const Nav = () => {
   return (
@@ -9,7 +9,14 @@ export const Nav = () => {
           <DashboardButton size="sm" />
         </li>
         <li>
-          <ThemeToggler />
+          <ButtonLink variant="secondary" size="sm" href="/posts">
+            Posts
+          </ButtonLink>
+        </li>
+        <li>
+          <ButtonLink variant="secondary" size="sm" href="/posts/new">
+            New Post
+          </ButtonLink>
         </li>
       </ul>
     </nav>

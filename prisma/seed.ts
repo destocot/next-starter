@@ -20,6 +20,13 @@ const generateUser = () => {
 };
 
 const main = async () => {
+  const resetArg = process.argv[2];
+
+  if (resetArg.trim().toLowerCase() === "reset") {
+    await db.post.deleteMany();
+    await db.user.deleteMany();
+  }
+
   console.log("Creating user...");
   const user = generateUser();
   const hashed = await hash(user.password);

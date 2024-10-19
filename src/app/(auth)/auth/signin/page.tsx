@@ -11,7 +11,7 @@ import {
 
 export default function Page() {
   return (
-    <div className="flex h-fit flex-[2] justify-center gap-y-4 self-center md:flex-1">
+    <div className="flex h-fit flex-1 justify-center gap-y-4 self-center">
       <Card className="w-full border-0 shadow-none sm:max-w-[380px] sm:border sm:shadow-sm">
         <CardHeader>
           <CardTitle className="text-3xl font-bold tracking-tight">

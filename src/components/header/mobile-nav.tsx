@@ -14,7 +14,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { DashboardButton } from "@/components/custom-ui/dashboard-button";
-import { ThemeToggler } from "@/components/theme-toggler";
 import { ButtonLink } from "@/components/custom-ui/button-link";
 import { SignoutButton } from "@/components/signout-button";
 
@@ -77,9 +76,6 @@ export const MobileNav = () => {
             )}
           </ul>
         </nav>
-        <div className="absolute right-16 top-4">
-          <ThemeToggler />
-        </div>
       </SheetContent>
     </Sheet>
   );

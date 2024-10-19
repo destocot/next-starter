@@ -3,17 +3,13 @@
 import { useViewport } from "@/hooks/use-viewport";
 import { MobileNav } from "@/components/header/mobile-nav";
 import { Nav } from "@/components/header/nav";
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { LoaderIcon } from "lucide-react";
+import { useMounted } from "@/hooks/use-mounted";
 
 export const NavWrapper = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  const { isMounted } = useMounted();
   const isMobile = useViewport("sm");
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   if (!isMounted) {
     return (

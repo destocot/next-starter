@@ -1,6 +1,7 @@
 import { Container } from "@/components/custom-ui/container";
 import { GetStartedButton } from "@/components/custom-ui/get-started-button";
 import { Footer } from "@/components/footer";
+import { ThemeToggler } from "@/components/theme-toggler";
 
 export default function Page() {
   return (
@@ -20,6 +21,9 @@ export default function Page() {
         </Container>
       </main>
       <Footer />
+      <div className="absolute right-2 top-2">
+        <ThemeToggler />
+      </div>
     </div>
   );
 }

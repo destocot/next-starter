@@ -17,7 +17,7 @@ export function ThemeToggler() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon" className="size-8 sm:size-10">
+        <Button variant="outline" size="icon" className="size-9">
           <SunIcon className="size-6 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 sm:size-[1.2rem]" />
           <MoonIcon className="absolute size-6 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 sm:size-[1.2rem]" />
           <span className="sr-only">Toggle theme</span>
