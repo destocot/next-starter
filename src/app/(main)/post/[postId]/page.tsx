@@ -1,5 +1,5 @@
 import { ArrowLeftFromLineIcon } from "lucide-react";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { flatten, safeParse } from "valibot";
 import type { Post } from "@prisma/client";
 
@@ -10,10 +10,14 @@ import { ButtonLink } from "@/components/custom-ui/button-link";
 import { Container } from "@/components/custom-ui/container";
 import { DeletePostDialog } from "@/components/posts/delete-post-dialog";
 import { UpdatePostDialog } from "@/components/posts/update-post-dialog";
+import { auth } from "@/auth";
 
 type PageProps = { params: { postId: Post["postId"] } };
 
 export default async function Page({ params }: PageProps) {
+  const session = await auth();
+  if (!session?.user?.id) redirect("/auth/signin");
+
   const postId = params.postId;
   if (!postId) notFound();
 
@@ -31,11 +35,11 @@ export default async function Page({ params }: PageProps) {
     <main className="mt-8">
       <Container>
         <div className="space-y-8">
-          <div className="flex flex-wrap-reverse justify-between gap-4">
+          <div className="flex flex-col-reverse justify-between gap-4 sm:flex-row">
             <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
               Post {post.postId}
             </h1>
-            <ButtonLink href="/posts" size="sm">
+            <ButtonLink href="/posts" size="sm" className="self-start">
               <ArrowLeftFromLineIcon size={16} className="mr-1" />
               Back to Posts
             </ButtonLink>

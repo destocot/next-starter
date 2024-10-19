@@ -4,8 +4,8 @@ import { Container } from "@/components/custom-ui/container";
 import { SignoutButton } from "@/components/signout-button";
 import { findOneUser } from "@/queries/users";
 import { ButtonLink } from "@/components/custom-ui/button-link";
-import { auth } from "@/auth";
 import { MyClientComponent } from "./my-client-component";
+import auth from "@/lib/auth";
 
 export default async function Page() {
   const session = await auth();
@@ -24,7 +24,7 @@ export default async function Page() {
               <ButtonLink href="/posts" size="sm">
                 Posts
               </ButtonLink>
-              <SignoutButton />
+              <SignoutButton size="sm" />
             </div>
           </div>
 

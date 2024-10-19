@@ -2,12 +2,33 @@ import Link from "next/link";
 import { PlusIcon } from "lucide-react";
 
 import { Container } from "@/components/custom-ui/container";
-import { findAllPosts } from "@/queries/posts";
+import { findAllPosts, findTotalPosts } from "@/queries/posts";
 import { formatDate } from "@/lib/utils";
 import { ButtonLink } from "@/components/custom-ui/button-link";
+import auth from "@/lib/auth";
+import { redirect } from "next/navigation";
+import { Pagination } from "@/components/pagination";
 
-export default async function Page() {
-  const posts = await findAllPosts();
+type PageProps = {
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export default async function Page({ searchParams }: PageProps) {
+  const session = await auth();
+  if (!session?.user?.id) redirect("/auth/signin");
+
+  const page = Math.max(
+    isNaN(Number(searchParams.pg)) ? 1 : Number(searchParams.pg),
+    1,
+  );
+
+  const postsPromise = findAllPosts(page);
+  const totalPostsPromise = findTotalPosts();
+
+  const [posts, totalPosts] = await Promise.all([
+    postsPromise,
+    totalPostsPromise,
+  ]);
 
   return (
     <main className="mt-8">
@@ -45,6 +66,8 @@ export default async function Page() {
               </li>
             ))}
           </ul>
+
+          <Pagination currentPage={page} totalPosts={totalPosts} />
         </div>
       </Container>
     </main>

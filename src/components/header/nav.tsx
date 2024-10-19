@@ -3,7 +3,7 @@ import { ThemeToggler } from "@/components/theme-toggler";
 
 export const Nav = () => {
   return (
-    <nav>
+    <nav className="hidden sm:block">
       <ul className="flex items-center gap-4">
         <li>
           <DashboardButton size="sm" />

@@ -3,8 +3,8 @@ import { redirect } from "next/navigation";
 
 import { ButtonLink } from "@/components/custom-ui/button-link";
 import { Container } from "@/components/custom-ui/container";
-import { auth } from "@/auth";
 import { CreatePostForm } from "@/components/posts/create-post-form";
+import auth from "@/lib/auth";
 
 export default async function Page() {
   const session = await auth();
@@ -24,7 +24,7 @@ export default async function Page() {
             </ButtonLink>
           </div>
 
-          <div className="max-w-sm">
+          <div className="sm:max-w-sm">
             <CreatePostForm />
           </div>
         </div>

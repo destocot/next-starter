@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 import { Providers } from "@/components/providers";
 import { SessionProvider } from "@/components/session-provider";
 
@@ -37,13 +35,7 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <Providers>
-            <div className="grid min-h-screen grid-rows-[auto_1fr_auto]">
-              <Header />
-              {children}
-              <Footer />
-            </div>
-          </Providers>
+          <Providers>{children}</Providers>
         </body>
       </html>
     </SessionProvider>

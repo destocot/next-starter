@@ -61,8 +61,13 @@ export const MobileNav = () => {
             {status === "authenticated" && (
               <>
                 <li className="mobileNav__item">
-                  <ButtonLink href="/posts" size="sm" variant="link">
+                  <ButtonLink href="/posts" variant="link">
                     Posts
+                  </ButtonLink>
+                </li>
+                <li className="mobileNav__item">
+                  <ButtonLink href="/posts/new" variant="link">
+                    New Post
                   </ButtonLink>
                 </li>
                 <li className="mt-auto">
