@@ -1,5 +1,5 @@
 import { SignupForm } from "@/components/auth/signup-form";
-import { ButtonLink } from "@/components/custom-ui/button-link";
+import { ButtonLink } from "@/components/custom-buttons/button-link";
 import {
   Card,
   CardContent,

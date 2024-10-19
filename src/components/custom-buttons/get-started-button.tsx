@@ -1,6 +1,6 @@
 "use client";
 
-import { ButtonLink } from "@/components/custom-ui/button-link";
+import { ButtonLink } from "@/components/custom-buttons/button-link";
 import { useSession } from "next-auth/react";
 
 export const GetStartedButton = () => {

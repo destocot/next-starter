@@ -1,5 +1,5 @@
 import { db } from "@/lib/db";
-import type { InsertUser } from "@/types";
+import type { InsertUser, SelectUser } from "@/types";
 import type { User } from "@prisma/client";
 
 export const createUser = async ({
@@ -43,10 +43,10 @@ export const findOneUserByEmail: {
 
 export const findOneUser = async (
   userId: string,
-): Promise<Pick<User, "id" | "email" | "createdAt"> | null> => {
+): Promise<SelectUser | null> => {
   const user = await db.user.findUnique({
     where: { id: userId },
-    select: { id: true, email: true, createdAt: true },
+    select: { id: true, email: true, createdAt: true, image: true, name: true },
   });
 
   return user;

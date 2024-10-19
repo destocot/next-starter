@@ -4,7 +4,7 @@ import { db } from "@/lib/db";
 
 export const findAllPosts = async (page: number) => {
   const session = await auth();
-  if (!session?.user?.id) {
+  if (!session?.user) {
     throw new Error("Unauthorized");
   }
 
@@ -21,7 +21,7 @@ export const findAllPosts = async (page: number) => {
 
 export const findTotalPosts = async () => {
   const session = await auth();
-  if (!session?.user?.id) {
+  if (!session?.user) {
     throw new Error("Unauthorized");
   }
 
@@ -34,7 +34,7 @@ export const findTotalPosts = async () => {
 
 export const findOnePost = async (postId: string) => {
   const session = await auth();
-  if (!session?.user?.id) {
+  if (!session?.user) {
     throw new Error("Unauthorized");
   }
 

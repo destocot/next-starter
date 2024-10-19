@@ -11,13 +11,13 @@
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate dev",
     "db:generate": "prisma generate",
-    "db:seed": "prisma db seed",
-    "db:reset": "prisma db seed reset"
+    "db:seed": "prisma db seed reset"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
+    "@auth/core": "^0.37.2",
     "@auth/prisma-adapter": "^2.7.0",
     "@node-rs/argon2": "^2.0.0",
     "@prisma/client": "5.21.1",

@@ -9,7 +9,7 @@ import { db } from "@/lib/db";
 
 export const deletePostAction = async (postId: Post["postId"]) => {
   const session = await auth();
-  if (!session?.user?.id) {
+  if (!session?.user) {
     throw new Error("Unauthorized");
   }
 

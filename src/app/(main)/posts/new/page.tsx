@@ -1,15 +1,10 @@
 import { ArrowLeftFromLineIcon } from "lucide-react";
-import { redirect } from "next/navigation";
 
-import { ButtonLink } from "@/components/custom-ui/button-link";
-import { Container } from "@/components/custom-ui/container";
+import { ButtonLink } from "@/components/custom-buttons/button-link";
+import { Container } from "@/components/layout/container";
 import { CreatePostForm } from "@/components/posts/create-post-form";
-import auth from "@/lib/auth";
 
 export default async function Page() {
-  const session = await auth();
-  if (!session?.user?.id) redirect("/auth/signin");
-
   return (
     <main className="mt-8">
       <Container>

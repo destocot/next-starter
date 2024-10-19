@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { PlusIcon } from "lucide-react";
 
-import { Container } from "@/components/custom-ui/container";
+import { Container } from "@/components/layout/container";
 import { findAllPosts, findTotalPosts } from "@/queries/posts";
 import { formatDate } from "@/lib/utils";
-import { ButtonLink } from "@/components/custom-ui/button-link";
+import { ButtonLink } from "@/components/custom-buttons/button-link";
 import auth from "@/lib/auth";
 import { redirect } from "next/navigation";
-import { Pagination } from "@/components/pagination";
+import { Pagination } from "@/components/posts/pagination";
 
 type PageProps = {
   searchParams: { [key: string]: string | string[] | undefined };
@@ -15,7 +15,7 @@ type PageProps = {
 
 export default async function Page({ searchParams }: PageProps) {
   const session = await auth();
-  if (!session?.user?.id) redirect("/auth/signin");
+  if (!session?.user) redirect("/auth/signin");
 
   const page = Math.max(
     isNaN(Number(searchParams.pg)) ? 1 : Number(searchParams.pg),

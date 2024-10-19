@@ -17,7 +17,7 @@ export const updatePostAction = async (
   formData: FormData,
 ): Promise<UpdatePostActionState> => {
   const session = await auth();
-  if (!session?.user?.id) {
+  if (!session?.user) {
     throw new Error("Unauthorized");
   }
 

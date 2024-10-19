@@ -11,11 +11,12 @@ const generatedPost = (): Omit<Prisma.PostCreateInput, "user"> => {
   };
 };
 
-const generateUser = () => {
+const generateUser = (): Prisma.UserCreateInput => {
   return {
     email: "jsmith@example.com",
     password: "testing",
     name: "john_smith",
+    image: "https://i.pravatar.cc/150?img=12",
   };
 };
 

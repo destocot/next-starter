@@ -6,17 +6,17 @@ import type { Post } from "@prisma/client";
 import { findOnePost } from "@/queries/posts";
 import { PostIdSchema } from "@/validators/posts";
 import { formatDate } from "@/lib/utils";
-import { ButtonLink } from "@/components/custom-ui/button-link";
-import { Container } from "@/components/custom-ui/container";
+import { ButtonLink } from "@/components/custom-buttons/button-link";
+import { Container } from "@/components/layout/container";
 import { DeletePostDialog } from "@/components/posts/delete-post-dialog";
 import { UpdatePostDialog } from "@/components/posts/update-post-dialog";
-import { auth } from "@/auth";
+import auth from "@/lib/auth";
 
 type PageProps = { params: { postId: Post["postId"] } };
 
 export default async function Page({ params }: PageProps) {
   const session = await auth();
-  if (!session?.user?.id) redirect("/auth/signin");
+  if (!session?.user) redirect("/auth/signin");
 
   const postId = params.postId;
   if (!postId) notFound();

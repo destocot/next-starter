@@ -5,7 +5,7 @@ import { toast } from "sonner";
 
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { SubmitButton } from "@/components/custom-ui/submit-button";
+import { SubmitButton } from "@/components/custom-buttons/submit-button";
 import { signupAction } from "@/actions/auth/signup-action";
 import type { SignupActionState } from "@/actions/auth/signup-action";
 import type { SignupInput } from "@/validators/auth";

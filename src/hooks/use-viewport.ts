@@ -21,7 +21,7 @@ export const useViewport = (breakpoint: keyof typeof twScreens) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [breakpoint]);
+  }, [parsedBreakpoint]);
 
   return isMobile;
 };

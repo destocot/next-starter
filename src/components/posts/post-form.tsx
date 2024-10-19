@@ -2,7 +2,7 @@
 
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { SubmitButton } from "@/components/custom-ui/submit-button";
+import { SubmitButton } from "@/components/custom-buttons/submit-button";
 import type { UpdatePostInput, CreatePostInput } from "@/validators/posts";
 import { UpdatePostActionState } from "@/actions/posts/update-post-action";
 import { CreatePostActionState } from "@/actions/posts/create-post-action";

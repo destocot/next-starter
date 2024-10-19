@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import { Container } from "@/components/custom-ui/container";
+import { Container } from "@/components/layout/container";
 import { NavWrapper } from "./nav-wrapper";
-import { ThemeToggler } from "../theme-toggler";
+import { ThemeToggler } from "../../theme-toggler";
 
 export const Header = () => {
   return (

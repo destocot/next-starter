@@ -1,4 +1,4 @@
-import { SubmitButton } from "@/components/custom-ui/submit-button";
+import { SubmitButton } from "@/components/custom-buttons/submit-button";
 import { deletePostAction } from "@/actions/posts/delete-post-action";
 
 type DeletePostButtonProps = {

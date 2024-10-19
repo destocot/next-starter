@@ -1,8 +1,8 @@
 "use client";
 
 import { useViewport } from "@/hooks/use-viewport";
-import { MobileNav } from "@/components/header/mobile-nav";
-import { Nav } from "@/components/header/nav";
+import { MobileNav } from "@/components/layout/header/mobile-nav";
+import { Nav } from "@/components/layout/header/nav";
 import { Button } from "@/components/ui/button";
 import { LoaderIcon } from "lucide-react";
 import { useMounted } from "@/hooks/use-mounted";

@@ -1,14 +1,14 @@
 import { ArrowLeftFromLineIcon, TriangleAlertIcon } from "lucide-react";
 
-import { ButtonLink } from "@/components/custom-ui/button-link";
-import { Container } from "@/components/custom-ui/container";
+import { ButtonLink } from "@/components/custom-buttons/button-link";
+import { Container } from "@/components/layout/container";
 
 export default function NotFound() {
   return (
     <main className="mt-8">
       <Container>
         <div className="space-y-4">
-          <div className="text-warning flex items-center">
+          <div className="flex items-center text-warning">
             <TriangleAlertIcon size={28} className="mr-2" />
             <h1 className="text-3xl font-bold tracking-tight">
               Post Not Found

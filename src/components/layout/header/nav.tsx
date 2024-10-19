@@ -1,5 +1,5 @@
-import { DashboardButton } from "@/components/custom-ui/dashboard-button";
-import { ButtonLink } from "@/components/custom-ui/button-link";
+import { DashboardButton } from "@/components/custom-buttons/dashboard-button";
+import { ButtonLink } from "@/components/custom-buttons/button-link";
 
 export const Nav = () => {
   return (

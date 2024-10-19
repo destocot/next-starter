@@ -13,5 +13,13 @@ export type ValibotActionState<
 > = { error: FlatErrors<T>; success: false; statusCode: 400 } | undefined;
 
 // Resources
-export type SelectPost = Omit<Post, "updatedAt" | "userId">;
+export type SelectPost = Pick<
+  Post,
+  "postId" | "title" | "content" | "createdAt"
+>;
+
+export type SelectUser = Pick<
+  User,
+  "id" | "email" | "name" | "image" | "createdAt"
+>;
 export type InsertUser = Pick<User, "email" | "password">;

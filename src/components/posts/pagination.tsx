@@ -2,7 +2,7 @@
 
 import { ArrowLeftSquareIcon, ArrowRightSquareIcon } from "lucide-react";
 import { usePathname, useSearchParams } from "next/navigation";
-import { ButtonLink } from "@/components/custom-ui/button-link";
+import { ButtonLink } from "@/components/custom-buttons/button-link";
 import { POSTS_PER_PAGE } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 

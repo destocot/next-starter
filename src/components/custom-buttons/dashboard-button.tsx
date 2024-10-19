@@ -2,7 +2,7 @@
 
 import { useSession } from "next-auth/react";
 
-import { ButtonLink } from "@/components/custom-ui/button-link";
+import { ButtonLink } from "@/components/custom-buttons/button-link";
 import { Button, type ButtonProps } from "@/components/ui/button";
 
 type DashboardButtonProps = ButtonProps;

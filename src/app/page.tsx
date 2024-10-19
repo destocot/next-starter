@@ -1,11 +1,16 @@
-import { Container } from "@/components/custom-ui/container";
-import { GetStartedButton } from "@/components/custom-ui/get-started-button";
-import { Footer } from "@/components/footer";
+import { Container } from "@/components/layout/container";
+import { GetStartedButton } from "@/components/custom-buttons/get-started-button";
+import { Footer } from "@/components/layout/footer";
 import { ThemeToggler } from "@/components/theme-toggler";
 
 export default function Page() {
   return (
-    <div className="grid min-h-screen grid-rows-[1fr_auto]">
+    <div className="grid min-h-screen grid-rows-[auto_1fr_auto]">
+      <header className="my-4">
+        <Container className="flex justify-end">
+          <ThemeToggler />
+        </Container>
+      </header>
       <main className="flex items-center">
         <Container>
           <div className="flex flex-col items-center gap-y-4">
@@ -21,9 +26,6 @@ export default function Page() {
         </Container>
       </main>
       <Footer />
-      <div className="absolute right-2 top-2">
-        <ThemeToggler />
-      </div>
     </div>
   );
 }

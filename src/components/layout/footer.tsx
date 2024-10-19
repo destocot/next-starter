@@ -1,4 +1,4 @@
-import { Container } from "@/components/custom-ui/container";
+import { Container } from "@/components/layout/container";
 
 export const Footer = () => {
   return (

@@ -13,9 +13,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { DashboardButton } from "@/components/custom-ui/dashboard-button";
-import { ButtonLink } from "@/components/custom-ui/button-link";
-import { SignoutButton } from "@/components/signout-button";
+import { DashboardButton } from "@/components/custom-buttons/dashboard-button";
+import { ButtonLink } from "@/components/custom-buttons/button-link";
+import { SignoutButton } from "@/components/custom-buttons/signout-button";
 
 export const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
