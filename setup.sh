@@ -29,3 +29,5 @@ echo "🚀 Initializing new git repository..."
 git init
 
 echo "✅ Setup complete! Your Next.js project is ready."
+
+pnpm approve-builds
