@@ -22,8 +22,8 @@ pnpm update --latest \
 echo "📥 Installing all dependencies..."
 pnpm install
 
-echo "🧹 Cleaning up git history..."
-rm -rf .git
+# echo "🧹 Cleaning up git history..."
+# rm -rf .git
 
 echo "✅ Setup complete! Your Next.js project is ready."
 
